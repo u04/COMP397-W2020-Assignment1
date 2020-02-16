@@ -232,4 +232,7 @@ $("#spinButton").click(function () {
         alert("Please enter a valid bet amount");
     }
     
-});
+}
+
+
+);
