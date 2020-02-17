@@ -6,6 +6,7 @@
   "author": "u04 <39099229+u04@users.noreply.github.com>",
   "license": "MIT",
   "dependencies": {
+    "@types/jquery": "^3.3.32",
     "createjs": "^1.0.1",
     "easeljs": "^1.0.2",
     "preloadjs": "^1.0.1",

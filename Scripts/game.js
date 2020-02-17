@@ -3,7 +3,7 @@
     let canvas = document.getElementById("canvas");
     let stage;
     let hiLabel;
-    let meButton;
+    let spinButton;
     let resetButton;
     let background;
     function Start() {
@@ -23,9 +23,10 @@
         hiLabel.x = 320;
         hiLabel.y = 240;
         stage.addChild(hiLabel);
-        meButton = new object.Button('./Assets/images/me.png', 450, 200, true);
-        stage.addChild(meButton);
-        meButton.on("click", function () {
+        spinButton = new object.Button('./Assets/images/spin.png', 550, 300, true);
+        stage.addChild(spinButton);
+        spinButton.on("click", function () {
+            spin();
             hiLabel.text = "touched";
         });
         resetButton = new object.Button('./Assets/images/reset.png', 400, 150, true);

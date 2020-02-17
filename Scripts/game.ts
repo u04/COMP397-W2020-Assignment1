@@ -3,7 +3,7 @@
     let canvas = document.getElementById("canvas");
     let stage:createjs.Stage;
     let hiLabel: createjs.Text;
-    let meButton: object.Button;
+    let spinButton: object.Button;
     let resetButton: object.Button;
     let background: createjs.Bitmap;
 
@@ -30,9 +30,9 @@
         hiLabel.y = 240;
         stage.addChild(hiLabel);
 
-        meButton = new object.Button('./Assets/images/me.png', 450, 200, true);
-        stage.addChild(meButton);
-        meButton.on("click", function(){
+        spinButton = new object.Button('./Assets/images/spin.png', 550, 300, true);
+        stage.addChild(spinButton);
+        spinButton.on("click", function(){
             
             hiLabel.text = "touched";
         });
@@ -41,6 +41,8 @@
         stage.addChild(resetButton);
         resetButton.on("click", function(){
             hiLabel.text = "hey";
+            
+            
         })
         
     }
