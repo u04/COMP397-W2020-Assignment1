@@ -61,6 +61,7 @@ function checkJackPot() {
     var jackPotWin = Math.floor(Math.random() * 51 + 1);
     if (jackPotTry == jackPotWin) {
         alert("You Won the $" + jackpot + " Jackpot!!");
+        stage.addChild(jackpotNotice);
         playerMoney += jackpot;
         jackpot = 1000;
     }

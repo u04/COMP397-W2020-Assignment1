@@ -6,6 +6,8 @@
     let statusLabel;
    let jackpotLable;
     let betLable;
+
+    let jackpotNotice;
     
     let spinButton;
     let resetButton;
@@ -50,19 +52,22 @@
         background = new createjs.Bitmap('./Assets/images/slot-machine_small.jpg');
         stage.addChild(background);
         
-        statusLabel = new createjs.Text("hi", "20px Consolas", "#000000");
-        statusLabel.x = 250;
-        statusLabel.y = 185;
-        jackpotLable = new createjs.Text("jack", "20px Consolas", "#000000");
-        jackpotLable.x = 250;
-        jackpotLable.y = 160;
-        betLable = new createjs.Text("b", "20px Consolas", "#000000");
+        betLable = new createjs.Text("click", "20px Consolas", "#000000");
         betLable.x = 250;
         betLable.y = 135;
-        
+        jackpotLable = new createjs.Text("spin", "20px Consolas", "#000000");
+        jackpotLable.x = 250;
+        jackpotLable.y = 160;
+        statusLabel = new createjs.Text("to play", "20px Consolas", "#000000");
+        statusLabel.x = 250;
+        statusLabel.y = 185;
         stage.addChild(statusLabel);
         stage.addChild(jackpotLable);
         stage.addChild(betLable);
+
+        jackpotNotice = new createjs.Bitmap('./Assets/images/jackpot.png');
+        jackpotNotice.x = 50;
+        jackpotNotice.y = 50;
 
         bananna1 = new createjs.Bitmap('./Assets/images/banana_small.jpg');
         bananna1.x = 100;
@@ -266,10 +271,12 @@
             jackpotLable.text = "jackpot: $" + jackpot;
             betLable.text = "bet: $" + playerBet;
         });
-        resetButton = new object.Button('./Assets/images/reset.png', 400, 550, true);
+        resetButton = new object.Button('./Assets/images/reset.png', 245, 565, true);
         stage.addChild(resetButton);
         resetButton.on("click", function () {
-            statusLabel.text = "hey";
+            location.reload();
+            return false;
+            
         });
     }
     window.addEventListener("load", Start);
