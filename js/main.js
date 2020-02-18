@@ -217,6 +217,7 @@ function spin() {
         spinResult = Reels();
         fruits = spinResult[0] + " - " + spinResult[1] + " - " + spinResult[2];
         $("div#result>p").text(fruits);
+        
         determineWinnings();
         turn++;
         showPlayerStats();
