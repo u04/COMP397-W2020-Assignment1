@@ -3,9 +3,9 @@
     let canvas = document.getElementById("canvas");
     let stage;
     
-   // let statusLabel;
-   // let jackpotLable;
-    //let betLable;
+    let statusLabel;
+   let jackpotLable;
+    let betLable;
     
     let spinButton;
     let resetButton;
@@ -50,19 +50,19 @@
         background = new createjs.Bitmap('./Assets/images/slot-machine_small.jpg');
         stage.addChild(background);
         
-        //statusLabel = new createjs.Text("hi", "20px Consolas", "#000000");
-        //statusLabel.x = 250;
-        //statusLabel.y = 185;
-        //jackpotLable = new createjs.Text("jack", "20px Consolas", "#000000");
-        //jackpotLable.x = 250;
-        //jackpotLable.y = 160;
-        //betLable = new createjs.text("b", "20px Consolas", "#000000");
-        //betLable.x = 250;
-        //betLable.y = 135;
+        statusLabel = new createjs.Text("hi", "20px Consolas", "#000000");
+        statusLabel.x = 250;
+        statusLabel.y = 185;
+        jackpotLable = new createjs.Text("jack", "20px Consolas", "#000000");
+        jackpotLable.x = 250;
+        jackpotLable.y = 160;
+        betLable = new createjs.Text("b", "20px Consolas", "#000000");
+        betLable.x = 250;
+        betLable.y = 135;
         
-        //stage.addChild(statusLabel);
-        //stage.addChild(jackpotLable);
-        //stage.addChild(betLable);
+        stage.addChild(statusLabel);
+        stage.addChild(jackpotLable);
+        stage.addChild(betLable);
 
         bananna1 = new createjs.Bitmap('./Assets/images/banana_small.jpg');
         bananna1.x = 100;
@@ -262,9 +262,9 @@
                 stage.addChild(blank3);
             }
 
-            //statusLabel.text = "player money: $" + playerMoney;
-            //jackpotLable.text = "jackpot: $" + jackpot;
-            //betLable.text = "bet: $" + playerBet;
+            statusLabel.text = "player money: $" + playerMoney;
+            jackpotLable.text = "jackpot: $" + jackpot;
+            betLable.text = "bet: $" + playerBet;
         });
         resetButton = new object.Button('./Assets/images/reset.png', 400, 550, true);
         stage.addChild(resetButton);
